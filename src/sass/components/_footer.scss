@@ -1,0 +1,149 @@
+.footer {
+	height: 380px;
+	background-color: #344a5f;
+	overflow: hidden;
+
+	@include tablet {
+		height: 680px;
+		margin-top: 100px;
+	}
+
+	@include mobile {
+		width: 414px;
+		height: 1250px;
+	}
+
+	&-wrapper {
+		@include flex(flex-start, space-between);
+
+		@include tablet {
+			flex-wrap: wrap;
+			margin: 40px;
+		}
+
+		margin-top: 80px;
+
+		color: white;
+
+		&__item {
+			@include tablet {
+				flex-basis: 50%;
+				margin-bottom: 80px;
+			}
+
+			@include mobile {
+				flex-basis: 100%;
+			}
+
+			flex-basis: 25%;
+			font-size: 1.4rem;
+
+			& h2 {
+				margin-bottom: 30px;
+			}
+
+			& p {
+				width: 85%;
+			}
+
+			&__time {
+				margin-top: 20px;
+			}
+
+			& h2 {
+				font-size: 26px;
+				font-weight: 500;
+			}
+
+			&__info {
+				@include flex(flex-start, flex-start);
+
+				& + & {
+					margin-top: 30px;
+				}
+				&__img {
+					width: 90px;
+					padding-right: 18px;
+					& img {
+						border-radius: 10px;
+					}
+				}
+
+				&__content {
+					& p {
+						line-height: 2rem;
+						font-size: 1.6rem;
+						margin-bottom: 10px;
+						transition: color 0.25s ease;
+
+						@include tablet {
+							width: 100%;
+							font-size: 1.6rem;
+							font-weight: 600;
+						}
+
+						&:hover {
+							cursor: pointer;
+							color: $txt-red-color;
+						}
+					}
+					& span {
+						color: $txt-red-color;
+						font-size: 1.4rem;
+					}
+				}
+			}
+
+			&__content {
+				&__item {
+					@include flex(center, flex-start);
+
+					& + & {
+						margin-top: 12px;
+					}
+				}
+
+				&__icon {
+					color: $btn-main-color;
+					font-size: 1rem;
+				}
+
+				&__text {
+					font-weight: 300;
+					font-size: 1.6rem;
+					margin-left: 10px;
+					transform: translateY(-2px);
+					transition: color 0.25s ease;
+
+					&:hover {
+						cursor: pointer;
+						color: $txt-red-color;
+					}
+				}
+			}
+
+			&__update__text {
+				margin-bottom: 30px;
+			}
+
+			& input {
+				background-color: transparent;
+				padding: 14px 56px 14px 18px;
+				margin-bottom: 16px;
+				border-radius: 4px;
+				outline: none;
+				border: 1px solid $btn-main-color;
+				font-size: 1.6rem;
+				color: $txt-white-color;
+
+				&::placeholder {
+					color: $txt-white-color;
+				}
+
+				@include tablet {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

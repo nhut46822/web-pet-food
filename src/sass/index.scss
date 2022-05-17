@@ -1,0 +1,29 @@
+@import "./variable";
+@import "./mixins";
+@import "./base";
+
+@import "./components/header";
+@import "./components/footer";
+@import "./components/button";
+@import "./components/Home/home-main";
+@import "./components/Home/home-pet";
+@import "./components/Home/home-discount";
+@import "./components/Home/home-product";
+@import "./components/product-item";
+@import "./components/Home/home-services";
+@import "./components/Home/home-product-list";
+@import "./components/Home/home-review";
+@import "./components/Home/home-update";
+
+@import "./components/Shop/shop-main";
+@import "./components/Shop/shop-item";
+
+@import "./components/About/about-main";
+@import "./components/About/about-team";
+@import "./components/About/about-work";
+
+@import "./components/Cart/cart-content";
+
+@import "./components/News/news-main";
+
+@import "./components/ConTact/contact-main";

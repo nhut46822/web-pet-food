@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,600&family=Poppins:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:ital,wght@0,300;0,400;0,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,100&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:ital,wght@0,300;0,400;0,500;1,600&family=Poppins:wght@200;300;400;500;700&family=Satisfy&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+	// user-select: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+img {
+	max-width: 100%;
+}
+
+.main {
+	margin-top: calc($header-height + 30px);
+	margin-bottom: 2rem;
+	min-height: 100vh;
+
+	@include tablet {
+		margin-top: calc(#{$header-tablet-height} + 140px);
+	}
+
+	@include mobile {
+		margin-top: calc(#{$header-mobile-height} + 100px);
+	}
+}
+
+.mt-left-right {
+	margin: 0 150px;
+}
+
+.btn-common {
+	background-color: $btn-main-color;
+	transition: background-color 0.25s ease;
+	color: $txt-white-color;
+}
+
+.btn-common:hover {
+	cursor: pointer;
+	background-color: $btn-second-color;
+}

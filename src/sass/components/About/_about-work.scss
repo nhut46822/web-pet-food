@@ -1,0 +1,43 @@
+.about-main__work {
+	@include mobile {
+		height: 1136px;
+	}
+
+	&__container {
+		@include tablet {
+			height: 832px;
+		}
+	}
+
+	&__content {
+		padding-top: 0;
+
+		&__title {
+			font-size: 2rem;
+		}
+
+		&__wrapper {
+			padding: 0 108px;
+
+			@include tablet {
+				padding: 0 48px;
+			}
+		}
+
+		&__description {
+			text-align: center;
+			border: 1px solid #ccc;
+			height: 300px;
+			padding-top: 24px;
+
+			& img {
+				width: 70px;
+			}
+		}
+	}
+}
+
+.line-bottom {
+	position: relative;
+	bottom: -8px;
+}

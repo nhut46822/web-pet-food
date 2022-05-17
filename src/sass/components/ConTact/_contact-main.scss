@@ -1,0 +1,106 @@
+.contact-main {
+	&__content {
+		&__header {
+			margin: 80px 0 40px;
+
+			&__title {
+				font-size: 2rem;
+			}
+		}
+
+		&__filled {
+			width: 50%;
+			margin: 0 auto;
+
+			@include tablet {
+				width: 80%;
+			}
+
+			&__input {
+				@include flex(flex-start, space-between);
+
+				margin-bottom: 18px;
+
+				@include mobile {
+					flex-wrap: wrap;
+
+					margin-bottom: 22px;
+				}
+
+				&__item {
+					@include mobile {
+						& + & {
+							margin-top: 22px;
+						}
+					}
+
+					& input {
+						padding: 16px 152px 16px 16px;
+						font-size: 1.6rem;
+						outline: none;
+						border: 1px solid $btn-main-color;
+						border-radius: 4px;
+
+						@include tablet {
+							padding: 12px 82px 12px 12px;
+						}
+
+						@include mobile {
+							padding: 16px 120px 16px 16px;
+						}
+
+						&::placeholder {
+							color: #968682;
+							font-size: 1.6rem;
+						}
+					}
+				}
+			}
+
+			&__textarea {
+				width: 100%;
+				outline: none;
+				border: 1px solid $btn-main-color;
+				resize: none;
+				height: 140px;
+
+				padding: 12px 0 0 16px;
+				font-size: 1.6rem;
+				font-family: "Poppins", sans-serif;
+				border-radius: 4px;
+
+				&::placeholder {
+					font-family: "Poppins", sans-serif;
+					font-size: 1.6rem;
+				}
+			}
+
+			&__btn {
+				margin-top: 18px;
+				margin-bottom: 88px;
+				text-align: center;
+				&__main {
+					font-size: 1.6rem;
+					text-align: center;
+					padding: 14px 96px;
+					background-color: $btn-main-color;
+
+					color: $txt-white-color;
+					border: none;
+					border-radius: 4px;
+
+					transition: background-color 0.25s ease;
+
+					@include mobile {
+						padding: 14px 140px;
+					}
+
+					&:hover {
+						cursor: pointer;
+						background-color: $btn-second-color;
+					}
+				}
+			}
+		}
+	}
+}

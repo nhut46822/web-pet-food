@@ -1,0 +1,138 @@
+.news-main {
+	&__content {
+		margin-top: 60px;
+
+		&__wrapper {
+			@include flex(flex-start, space-between);
+
+			padding: 0;
+
+			@include mobile {
+				padding: 0;
+			}
+
+			&__item {
+				&__left {
+					@include flex(flex-start, space-between);
+
+					flex-wrap: wrap;
+
+					flex: 0 1 68%;
+
+					@include tablet {
+						flex: 0 1 64%;
+						margin-left: 16px;
+					}
+
+					@include mobile {
+						flex: 0 1 98%;
+					}
+
+					&__part {
+						flex: 0 1 48%;
+						margin: 0 0 40px 0 !important;
+
+						@include mobile {
+							flex: 0 1 96%;
+						}
+
+						&__image {
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+				}
+
+				&__right {
+					@include tablet {
+						flex: 0 1 30%;
+						margin-right: 12px;
+					}
+
+					@include mobile {
+						flex: 0 1 94%;
+					}
+
+					&__blog {
+						height: 310px;
+
+						@include tablet {
+							height: 390px;
+						}
+
+						&__title {
+							font-weight: 600;
+							font-size: 1.4rem;
+							transition: color 0.25s ease;
+
+							@include tablet {
+								width: 96px;
+							}
+
+							@include mobile {
+								width: 154px;
+							}
+
+							&:hover {
+								cursor: pointer;
+								color: $txt-red-color;
+							}
+						}
+
+						&__time {
+							font-weight: 500;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.news {
+	&__btn {
+		width: 40px;
+		// margin-left: -12px;
+	}
+
+	&__search {
+		@include mobile {
+			margin-right: 8px;
+
+			padding-left: 16px !important;
+		}
+	}
+
+	&__image {
+		@include mobile {
+			width: 90px !important;
+		}
+	}
+	@include tablet {
+		&__btn {
+			margin-left: -12px;
+		}
+
+		&__search {
+			width: 94%;
+			margin-left: -12px;
+			padding-left: 6px;
+		}
+
+		&__find {
+			margin-left: -12px;
+		}
+
+		&__category {
+			height: 120px !important;
+		}
+
+		&__image {
+			width: 115px;
+		}
+
+		&__item {
+			height: 90px;
+		}
+	}
+}

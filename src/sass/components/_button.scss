@@ -1,0 +1,32 @@
+.btn-main {
+	color: $txt-white-color;
+	padding: 15px 100px;
+	background-color: $btn-main-color;
+	font-size: 1.6rem;
+
+	border-radius: 4px;
+	font-weight: 300;
+	border: none;
+	transition: background-color 0.25s ease;
+
+	&:hover {
+		cursor: pointer;
+		background-color: $btn-second-color;
+	}
+
+	@include tablet {
+		&.large {
+			width: 100%;
+		}
+	}
+
+	&.sm {
+		padding: 14px 40px;
+	}
+
+	&.big {
+		@include mobile {
+			width: 100%;
+		}
+	}
+}

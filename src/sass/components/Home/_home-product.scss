@@ -1,0 +1,26 @@
+.home-product {
+	margin: 100px 0;
+
+	&__content {
+		&__title {
+			font-weight: 500;
+		}
+	}
+
+	&__productList {
+		@include flex(center, center);
+
+		width: 80%;
+
+		margin: 0 70px 0 168px;
+		flex-wrap: wrap;
+
+		@include tablet {
+			margin: 0 70px 0 130px;
+		}
+
+		@include mobile {
+			margin: 0 70px 0 55px;
+		}
+	}
+}

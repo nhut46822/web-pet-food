@@ -1,0 +1,184 @@
+.home-review {
+	width: 100vw;
+	position: relative;
+	height: 600px;
+
+	@include mobile {
+		height: 1000px;
+	}
+
+	&__image {
+		width: 100%;
+		object-fit: cover;
+		height: 100%;
+	}
+
+	&__container {
+		position: absolute;
+		inset: 0;
+		background-color: rgba(0, 0, 0, 0.75);
+		color: $txt-white-color;
+		padding-top: 56px;
+
+		& h2 {
+			color: $txt-white-color;
+		}
+
+		&__content {
+			width: 76%;
+			margin: 70px auto;
+			@include flex(flex-start, flex-start);
+			overflow: hidden;
+			position: relative;
+
+			@include tablet {
+				width: 88%;
+			}
+
+			@include mobile {
+				margin-top: 100px;
+			}
+
+			&__slide {
+				flex: 1 0 100%;
+				@include flex(flex-start, flex-start);
+				position: relative;
+
+				@include mobile {
+					@include flex(center, center);
+					flex-wrap: wrap;
+				}
+
+				&__img {
+					width: 45%;
+					height: 228px;
+					border-radius: 50%;
+					overflow: hidden;
+					border: 15px solid #fff;
+
+					@include tablet {
+						width: 700px;
+					}
+
+					@include mobile {
+						width: 228px;
+					}
+
+					& img {
+						width: 100%;
+						border-radius: 50%;
+						border: 1px solid rgb(230, 230, 230);
+					}
+				}
+
+				&__description {
+					margin-left: 50px;
+
+					@include tablet {
+						margin-left: 30px;
+					}
+
+					@include mobile {
+						text-align: center;
+					}
+
+					&__btn {
+						position: absolute;
+						width: 220px;
+						height: 40px;
+						right: 220px;
+						top: 270px;
+						z-index: 1;
+
+						@include flex(center, space-around);
+
+						@include tablet {
+							top: 230px;
+							right: 5px;
+						}
+
+						@include tablet {
+							top: 220px;
+							right: 5px;
+						}
+
+						&__icon {
+							width: 82px;
+							height: 100%;
+							background-color: $btn-main-color;
+							border-radius: 40px;
+							border: 1px solid #fff;
+							font-size: 1.6rem;
+
+							@include flex(center, center);
+						}
+
+						&__icon:hover {
+							cursor: pointer;
+							background-color: $btn-second-color;
+						}
+					}
+
+					& h3 {
+						font-size: 3.4rem;
+						font-weight: 500;
+						position: relative;
+						margin-bottom: 26px;
+
+						@include mobile {
+							text-align: left;
+							margin: 12px 0 12px 30px;
+						}
+
+						&::after {
+							content: "";
+							position: absolute;
+							display: block;
+							width: 40px;
+							height: 1px;
+							background-color: #fff;
+							left: 215px;
+							top: 50%;
+
+							@include mobile {
+							}
+						}
+					}
+
+					&__text {
+						font-size: 1.5rem;
+						font-weight: 400;
+
+						@include tablet {
+							width: 58%;
+						}
+
+						@include tablet {
+							width: 90%;
+						}
+					}
+
+					&__name {
+						margin-top: 16px;
+						font-size: 2rem;
+						color: $txt-second-color;
+						display: inline-block;
+						font-weight: 400;
+
+						@include tablet {
+							text-align: left;
+							margin-left: -30px;
+						}
+					}
+
+					& span {
+						padding-left: 10px;
+						font-weight: 300;
+						font-size: 1.6rem;
+						color: $txt-white-color;
+					}
+				}
+			}
+		}
+	}
+}

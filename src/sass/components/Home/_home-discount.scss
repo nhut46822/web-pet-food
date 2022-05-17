@@ -1,0 +1,32 @@
+.home-discount {
+	position: relative;
+	height: 600px;
+
+	@include tablet {
+		margin-top: 40px;
+	}
+
+	& img {
+		width: 100%;
+		object-fit: cover;
+		height: 100%;
+	}
+
+	&:hover &__modal {
+		display: block;
+	}
+
+	&__modal {
+		display: none;
+		position: absolute;
+		inset: 0;
+		background-color: rgba(51, 51, 51, 0.3);
+	}
+
+	&__btn {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
